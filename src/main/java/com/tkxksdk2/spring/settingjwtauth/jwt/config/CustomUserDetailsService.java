@@ -1,4 +1,4 @@
-package com.tkxksdk2.spring.settingjwtauth.jwt;
+package com.tkxksdk2.spring.settingjwtauth.jwt.config;
 
 import com.tkxksdk2.spring.settingjwtauth.users.UserRepository;
 import org.slf4j.Logger;

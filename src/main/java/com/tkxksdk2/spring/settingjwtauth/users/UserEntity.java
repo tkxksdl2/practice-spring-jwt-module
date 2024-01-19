@@ -22,11 +22,11 @@ public class UserEntity implements UserDetails {
     @Column(nullable = false)
     private String password;
 
-    List<String> roles = new ArrayList<>();
+    List<UserRoles> roles;
 
     public UserEntity() {
     }
-    public UserEntity(String username, String password, List<String> roles) {
+    public UserEntity(String username, String password, List<UserRoles> roles) {
         this.username = username;
         this.password = password;
         this.roles = roles;
@@ -35,6 +35,7 @@ public class UserEntity implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return this.roles.stream()
+                .map(Enum::name)
                 .map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toList());
     }
@@ -69,3 +70,5 @@ public class UserEntity implements UserDetails {
         return true;
     }
 }
+
+

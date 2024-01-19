@@ -1,4 +1,4 @@
-package com.tkxksdk2.spring.settingjwtauth.jwt;
+package com.tkxksdk2.spring.settingjwtauth.jwt.config;
 
 
 import com.nimbusds.jose.JOSEException;
@@ -39,7 +39,7 @@ public class JwtSecurityConfiguration {
         ));
 
         http.authorizeHttpRequests((authorize ->
-                authorize.requestMatchers("/h2-console/**", "/","login").permitAll()
+                authorize.requestMatchers("/h2-console/**", "/","/auth/**").permitAll()
                         .anyRequest().authenticated()))
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt(jwt -> jwt.decoder(accessTokenDecoder)));
 
@@ -118,7 +118,6 @@ public class JwtSecurityConfiguration {
     @Bean
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
-
     }
 
 
