@@ -3,7 +3,7 @@ package com.tkxksdk2.spring.settingjwtauth.jwt;
 
 import com.tkxksdk2.spring.settingjwtauth.jwt.dtos.RefreshDto;
 import com.tkxksdk2.spring.settingjwtauth.jwt.dtos.LoginDto;
-import com.tkxksdk2.spring.settingjwtauth.users.dtos.TokenInfo;
+import com.tkxksdk2.spring.settingjwtauth.jwt.dtos.TokenInfo;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

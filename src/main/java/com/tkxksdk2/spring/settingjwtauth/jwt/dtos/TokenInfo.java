@@ -1,4 +1,4 @@
-package com.tkxksdk2.spring.settingjwtauth.users.dtos;
+package com.tkxksdk2.spring.settingjwtauth.jwt.dtos;
 
 public class TokenInfo {
     private String accessToken;
