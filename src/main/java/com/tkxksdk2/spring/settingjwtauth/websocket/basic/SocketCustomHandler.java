@@ -1,6 +1,7 @@
-package com.tkxksdk2.spring.settingjwtauth;
+package com.tkxksdk2.spring.settingjwtauth.websocket.basic;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
@@ -18,7 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * <br/>
  * @method : sendStringMessageToAll(String message) 모든 WebSocketSession에 메세지 전송
  */
-@Service
+@Component
 public class SocketCustomHandler extends TextWebSocketHandler {
 
     private final Set<WebSocketSession> sessions = ConcurrentHashMap.newKeySet();
